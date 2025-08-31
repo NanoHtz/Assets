@@ -1,0 +1,75 @@
+<!-- assets/banner.svg | Philosophers (remake, safe viewBox) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+  <title id="t">Philosophers — Dining Philosophers in C (threads &amp; mutexes)</title>
+  <desc id="d">Banner oscuro con mesa redonda, 5 filósofos y tenedores; estados think/eat/sleep y un pequeño timeline. Todo dentro del lienzo.</desc>
+
+  <!-- ====== Defs & estilos ====== -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1b27"/>
+      <stop offset="100%" stop-color="#15161e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.10"/>
+      <stop offset="60%" stop-color="#1a1b27" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .title{font:700 56px/1.1 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#70a5fd}
+      .tag{font:500 20px/1.4 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#c0caf5}
+      .mono{font:600 16px/1.35 "JetBrains Mono","Fira Code",Menlo,Consolas,monospace;fill:#c0caf5}
+      .table{fill:#0b1020;stroke:#70a5fd;stroke-opacity:.35}
+      .fork{stroke:#7aa2f7;stroke-width:4;stroke-linecap:round}
+      .phil{fill:#bb9af7}
+      .state{font:600 14px/1.2 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#c0caf5}
+      .panel{fill:#0b1020;stroke:#bb9af7;stroke-opacity:.5}
+    </style>
+  </defs>
+
+  <!-- ====== Fondo ====== -->
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <rect width="1280" height="360" fill="url(#glow)"/>
+
+  <!-- ====== Texto izquierdo ====== -->
+  <g transform="translate(64,112)">
+    <text class="title">Philosophers</text>
+    <text class="tag" y="48">Threads · Mutexes · Deadlock avoidance · Timing</text>
+    <text class="tag" y="78">C · Precise timestamps &amp; state machine</text>
+  </g>
+
+  <!-- ====== Escena derecha (ANCHO INTERNO ≤ 500px, x=740 → margen seguro) ====== -->
+  <g transform="translate(740,36)">
+    <!-- mesa -->
+    <circle class="table" cx="220" cy="140" r="108"/>
+    <!-- filósofos -->
+    <g class="phil">
+      <circle cx="220" cy="30"  r="10"/>
+      <circle cx="318" cy="86"  r="10"/>
+      <circle cx="286" cy="196" r="10"/>
+      <circle cx="154" cy="196" r="10"/>
+      <circle cx="122" cy="86"  r="10"/>
+    </g>
+    <!-- tenedores (entre filósofos) -->
+    <g class="fork">
+      <line x1="250" y1="58" x2="286" y2="78"/>
+      <line x1="304" y1="128" x2="296" y2="162"/>
+      <line x1="220" y1="206" x2="170" y2="206"/>
+      <line x1="144" y1="162" x2="136" y2="128"/>
+      <line x1="156" y1="58" x2="192" y2="78"/>
+    </g>
+    <!-- etiquetas de estado (dentro del ancho seguro) -->
+    <g class="state" text-anchor="middle">
+      <text x="220" y="16">think</text>
+      <text x="342" y="92">eat</text>
+      <text x="292" y="224">sleep</text>
+      <text x="148" y="224">think</text>
+      <text x="98"  y="92">eat</text>
+    </g>
+
+    <!-- timeline inferior (panel ancho 460, cabe en 500) -->
+    <g transform="translate(0,248)">
+      <rect class="panel" x="0" y="0" width="460" height="58" rx="10"/>
+      <text class="mono" x="14" y="24">t=153ms  P2 has taken a fork</text>
+      <text class="mono" x="14" y="44">t=159ms  P2 is eating</text>
+    </g>
+  </g>
+</svg>
