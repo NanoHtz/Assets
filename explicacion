@@ -1,0 +1,7 @@
+Como usar los banners, añadiendo: 
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/NanoHtz/Assets/main/philosophers/banner.svg" alt="Philosophers banner">
+</p>
+
+Donde philosophers es la carpeta donde se guardan los archivos de cada proyecto.
