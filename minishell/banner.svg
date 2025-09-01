@@ -1,0 +1,43 @@
+<!-- assets/banner.svg | minishell (ajustado) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+  <title id="t">Minishell — Lexer/Parser · Pipes · Redirections · Signals</title>
+  <desc id="d">Banner oscuro con una ventana de terminal minimalista y un pipeline.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1b27"/><stop offset="100%" stop-color="#15161e"/>
+    </linearGradient>
+    <style>
+      .title{font:700 56px/1.1 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#70a5fd}
+      .tag{font:500 20px/1.4 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#c0caf5}
+      .mono{font:600 16px/1.35 "JetBrains Mono","Fira Code",Menlo,Consolas,monospace;fill:#c0caf5}
+    </style>
+  </defs>
+
+  <rect width="1280" height="360" fill="url(#bg)"/>
+
+  <!-- texto -->
+  <g transform="translate(64,112)">
+    <text class="title">Minishell</text>
+    <text class="tag" y="48">Lexer/Parser · Pipes · Redirections · Signals</text>
+    <text class="tag" y="78">C · Unix internals</text>
+  </g>
+
+  <!-- terminal -->
+  <g transform="translate(760,70)">
+    <rect x="0" y="0" width="480" height="220" rx="12" fill="#0b1020" stroke="#70a5fd" stroke-opacity=".5"/>
+    <!-- semáforos -->
+    <g transform="translate(16,14)">
+      <circle cx="0" cy="0" r="4" fill="#f7768e"/><circle cx="12" cy="0" r="4" fill="#bb9af7"/><circle cx="24" cy="0" r="4" fill="#7aa2f7"/>
+    </g>
+    <!-- contenido (envuelto en varias líneas para no desbordar) -->
+    <g transform="translate(16,42)">
+      <text class="mono">
+        <tspan x="0" dy="0">nano@42:~$ ./minishell</tspan>
+        <tspan x="0" dy="22">minishell$ cat file.txt |</tspan>
+        <tspan x="0" dy="22">grep foo | wc -l &gt; count.txt</tspan>
+        <tspan x="0" dy="22">minishell$ echo $USER</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
