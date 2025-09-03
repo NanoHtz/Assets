@@ -1,0 +1,56 @@
+<!-- assets/banner.svg | libft -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+  <title id="t">libft — Custom C standard library: memory, strings, lists</title>
+  <desc id="d">Banner oscuro con pila de “libros” de funciones C al lado derecho.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1b27"/><stop offset="100%" stop-color="#15161e"/>
+    </linearGradient>
+    <style>
+      .title{font:700 56px/1.1 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#70a5fd}
+      .tag{font:500 20px/1.4 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#c0caf5}
+      .label{font:600 15px/1.2 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#0b1020}
+      .edge{fill:#0b1020;opacity:.25}
+    </style>
+  </defs>
+
+  <rect width="1280" height="360" fill="url(#bg)"/>
+
+  <!-- texto -->
+  <g transform="translate(64,112)">
+    <text class="title">libft</text>
+    <text class="tag" y="48">Memory · Strings · Character · Lists</text>
+    <text class="tag" y="78">C · Unit tested · Reusable building blocks</text>
+  </g>
+
+  <!-- “libros” de funciones -->
+  <g transform="translate(760,60)">
+    <!-- sombra -->
+    <ellipse cx="240" cy="260" rx="230" ry="26" class="edge"/>
+    <!-- libro 1 -->
+    <g transform="translate(0,200)">
+      <rect x="0" y="0" width="300" height="44" rx="8" fill="#7aa2f7"/>
+      <rect x="0" y="36" width="300" height="8" fill="#c0caf5" opacity=".2"/>
+      <text class="label" x="16" y="28">memset · memcpy · bzero</text>
+    </g>
+    <!-- libro 2 -->
+    <g transform="translate(20,150)">
+      <rect x="0" y="0" width="300" height="44" rx="8" fill="#bb9af7"/>
+      <rect x="0" y="36" width="300" height="8" fill="#c0caf5" opacity=".2"/>
+      <text class="label" x="16" y="28">strlen · strchr · strdup · substr</text>
+    </g>
+    <!-- libro 3 -->
+    <g transform="translate(40,100)">
+      <rect x="0" y="0" width="300" height="44" rx="8" fill="#70a5fd"/>
+      <rect x="0" y="36" width="300" height="8" fill="#c0caf5" opacity=".2"/>
+      <text class="label" x="16" y="28">atoi · itoa · split · join · trim</text>
+    </g>
+    <!-- libro 4 -->
+    <g transform="translate(60,50)">
+      <rect x="0" y="0" width="300" height="44" rx="8" fill="#f7768e"/>
+      <rect x="0" y="36" width="300" height="8" fill="#c0caf5" opacity=".2"/>
+      <text class="label" x="16" y="28">lstnew · lstadd · lstdel · lstiter</text>
+    </g>
+  </g>
+</svg>
