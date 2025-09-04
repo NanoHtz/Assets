@@ -1,0 +1,44 @@
+<!-- assets/banner.svg | Data Analysis -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+  <title id="t">Data Analysis with Python — EDA · Visualization · NumPy · pandas · SciPy</title>
+  <desc id="d">Banner oscuro con gráfica de líneas y barras en el lateral derecho.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1b27"/><stop offset="100%" stop-color="#15161e"/>
+    </linearGradient>
+    <style>
+      .title{font:700 56px/1.1 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#70a5fd}
+      .tag{font:500 20px/1.4 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#c0caf5}
+      .axis{stroke:#7aa2f7;opacity:.5;stroke-width:1}
+    </style>
+  </defs>
+
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <!-- texto -->
+  <g transform="translate(64,112)">
+    <text class="title">Data Analysis</text>
+    <text class="tag" y="48">EDA · Visualization · NumPy · pandas · SciPy</text>
+    <text class="tag" y="78">Python notebooks &amp; reproducibility</text>
+  </g>
+
+  <!-- panel gráfico (derecha) -->
+  <g transform="translate(760,40)">
+    <!-- ejes -->
+    <path class="axis" d="M0,260 H480 M0,200 H480 M0,140 H480 M0,80 H480"/>
+    <path class="axis" d="M0,40 V300"/>
+    <!-- barras -->
+    <g>
+      <rect x="30"  y="190" width="28" height="110" fill="#7aa2f7" opacity=".8"/>
+      <rect x="90"  y="160" width="28" height="140" fill="#bb9af7" opacity=".8"/>
+      <rect x="150" y="120" width="28" height="180" fill="#70a5fd" opacity=".8"/>
+      <rect x="210" y="150" width="28" height="150" fill="#7aa2f7" opacity=".8"/>
+    </g>
+    <!-- línea -->
+    <path d="M0,220 C80,180 160,200 240,140 S400,100 480,160" fill="none" stroke="#f7768e" stroke-width="3"/>
+    <!-- puntos -->
+    <g fill="#f7768e">
+      <circle cx="0" cy="220" r="3"/><circle cx="120" cy="190" r="3"/><circle cx="240" cy="140" r="3"/><circle cx="360" cy="110" r="3"/><circle cx="480" cy="160" r="3"/>
+    </g>
+  </g>
+</svg>
