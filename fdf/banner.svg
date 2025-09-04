@@ -1,0 +1,35 @@
+<!-- assets/banner.svg | fdf -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+  <title id="t">fdf — Wireframe 3D in C (MiniLibX)</title>
+  <desc id="d">Banner oscuro con malla wireframe isométrica a la derecha.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1b27"/><stop offset="100%" stop-color="#15161e"/>
+    </linearGradient>
+    <style>
+      .title{font:700 56px/1.1 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#70a5fd}
+      .tag{font:500 20px/1.4 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#c0caf5}
+    </style>
+  </defs>
+
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <g transform="translate(64,112)">
+    <text class="title">fdf</text>
+    <text class="tag" y="48">Wireframe 3D · Isometric · Rotation · Zoom · Color</text>
+    <text class="tag" y="78">C · MiniLibX</text>
+  </g>
+
+  <!-- wireframe -->
+  <g transform="translate(740,40)" fill="none" stroke-width="1.5">
+    <!-- rejilla base -->
+    <g stroke="#7aa2f7" opacity=".25">
+      <path d="M0,160 L520,40"/><path d="M0,200 L520,80"/><path d="M0,240 L520,120"/><path d="M0,280 L520,160"/>
+      <path d="M0,160 L0,280"/><path d="M130,130 L130,250"/><path d="M260,100 L260,220"/><path d="M390,70 L390,190"/><path d="M520,40 L520,160"/>
+    </g>
+    <!-- contorno montañoso -->
+    <path d="M0,220 L65,200 L130,210 L195,180 L260,190 L325,160 L390,175 L455,150 L520,160" stroke="#bb9af7"/>
+    <!-- proyección superior -->
+    <path d="M0,180 L65,160 L130,170 L195,140 L260,150 L325,120 L390,135 L455,110 L520,120" stroke="#70a5fd"/>
+  </g>
+</svg>
