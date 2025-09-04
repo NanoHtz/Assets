@@ -1,0 +1,50 @@
+<!-- assets/banner.svg | push_swap -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+  <title id="t">push_swap — Sorting with two stacks (C)</title>
+  <desc id="d">Banner oscuro con dos pilas de bloques y flechas de swap/rotate a la derecha.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1b27"/><stop offset="100%" stop-color="#15161e"/>
+    </linearGradient>
+    <style>
+      .title{font:700 56px/1.1 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#70a5fd}
+      .tag{font:500 20px/1.4 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#c0caf5}
+    </style>
+  </defs>
+
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <g transform="translate(64,112)">
+    <text class="title">push_swap</text>
+    <text class="tag" y="48">Two stacks · LIS heuristic · Minimal operations</text>
+    <text class="tag" y="78">C · Performance &amp; correctness</text>
+  </g>
+
+  <!-- pilas A/B -->
+  <g transform="translate(760,70)">
+    <!-- pila A -->
+    <g>
+      <rect x="0" y="180" width="120" height="30" fill="#7aa2f7" opacity=".9"/>
+      <rect x="0" y="150" width="120" height="30" fill="#bb9af7" opacity=".9"/>
+      <rect x="0" y="120" width="120" height="30" fill="#70a5fd" opacity=".9"/>
+      <text x="60" y="230" fill="#c0caf5" font-family="Inter,Arial" font-size="16" text-anchor="middle">A</text>
+    </g>
+    <!-- pila B -->
+    <g transform="translate(180,30)">
+      <rect x="0" y="150" width="120" height="30" fill="#7aa2f7" opacity=".8"/>
+      <rect x="0" y="120" width="120" height="30" fill="#bb9af7" opacity=".8"/>
+      <text x="60" y="210" fill="#c0caf5" font-family="Inter,Arial" font-size="16" text-anchor="middle">B</text>
+    </g>
+    <!-- flechas: swap (↕), push (→), rotate (↻) -->
+    <g fill="none" stroke="#f7768e" stroke-width="2">
+      <path d="M140,135 C155,135 155,195 140,195" />
+      <path d="M120,135 L170,135" /><path d="M160,130 L170,135 L160,140" />
+      <path d="M60,80 A35,35 0 1 1 61,80" />
+    </g>
+    <g fill="#f7768e" font-family="Inter,Arial" font-size="14">
+      <text x="146" y="170">swap</text>
+      <text x="125" y="120">push</text>
+      <text x="40"  y="72">rotate</text>
+    </g>
+  </g>
+</svg>
