@@ -1,0 +1,60 @@
+<!-- assets/banner.svg | get_next_line (rehecho y ajustado al viewBox) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+  <title id="t">get_next_line — Read a file descriptor line by line</title>
+  <desc id="d">Banner oscuro con archivo, buffer circular y líneas de salida; todo dentro del lienzo.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1b27"/><stop offset="100%" stop-color="#15161e"/>
+    </linearGradient>
+    <style>
+      .title{font:700 56px/1.1 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#70a5fd}
+      .tag{font:500 20px/1.4 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#c0caf5}
+      .mono{font:600 16px/1.35 "JetBrains Mono","Fira Code",Menlo,Consolas,monospace;fill:#c0caf5}
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#7aa2f7"/>
+    </marker>
+  </defs>
+
+  <!-- fondo -->
+  <rect width="1280" height="360" fill="url(#bg)"/>
+
+  <!-- texto -->
+  <g transform="translate(64,112)">
+    <text class="title">get_next_line</text>
+    <text class="tag" y="48">Buffered I/O · Static stash · Multiple FDs</text>
+    <text class="tag" y="78">C · Robust against leaks and edge cases</text>
+  </g>
+
+  <!-- composición derecha (todo cabe en 520 px de ancho) -->
+  <g transform="translate(720,60)">
+    <!-- archivo -->
+    <g>
+      <rect x="0" y="0" width="110" height="150" rx="8" fill="#0b1020" stroke="#7aa2f7" opacity=".9"/>
+      <path d="M110,36 L85,36 Q75,36 75,26 L75,0" fill="#0b1020" stroke="#7aa2f7"/>
+      <text class="mono" x="12" y="32">fd = 3</text>
+      <text class="mono" x="12" y="56">read()</text>
+      <text class="mono" x="12" y="80">stash</text>
+    </g>
+
+    <!-- flecha al buffer -->
+    <path d="M120,60 C150,60 150,100 180,100" fill="none" stroke="#7aa2f7" stroke-width="2" marker-end="url(#m)"/>
+
+    <!-- buffer circular -->
+    <g transform="translate(190,70)">
+      <circle cx="50" cy="50" r="50" fill="none" stroke="#70a5fd" stroke-width="3"/>
+      <path d="M50,0 A50,50 0 0 1 100,50" fill="none" stroke="#f7768e" stroke-width="6" opacity=".9"/>
+      <text class="mono" x="50" y="58" text-anchor="middle">BUFFER_SIZE</text>
+    </g>
+
+    <!-- líneas de salida -->
+    <g transform="translate(330,0)">
+      <rect x="0" y="0" width="180" height="180" rx="10" fill="#0b1020" stroke="#bb9af7" opacity=".85"/>
+      <text class="mono" x="12" y="36">"line 1\n"</text>
+      <text class="mono" x="12" y="64">"line 2\n"</text>
+      <text class="mono" x="12" y="92">"line 3\n"</text>
+      <text class="mono" x="12" y="120">NULL (EOF)</text>
+    </g>
+  </g>
+</svg>
