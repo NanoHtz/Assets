@@ -1,0 +1,50 @@
+<!-- assets/banner.svg | ft_printf (ajustado para no salir del recuadro) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+  <title id="t">ft_printf — printf-like function in C: %d %s %x %p</title>
+  <desc id="d">Banner oscuro con ventana de terminal mostrando una llamada a ft_printf y su salida. El contenido está envuelto para no salir del recuadro.</desc>
+
+  <defs>
+    <!-- Fondo tokyonight -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1b27"/>
+      <stop offset="100%" stop-color="#15161e"/>
+    </linearGradient>
+
+    <!-- Estilos -->
+    <style>
+      .title{font:700 56px/1.1 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#70a5fd}
+      .tag{font:500 20px/1.4 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#c0caf5}
+      .mono{font:600 16px/1.35 "JetBrains Mono","Fira Code",Menlo,Consolas,monospace;fill:#c0caf5}
+    </style>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1280" height="360" fill="url(#bg)"/>
+
+  <!-- Texto izquierdo -->
+  <g transform="translate(64,112)">
+    <text class="title">ft_printf</text>
+    <text class="tag" y="48">Formats: %d · %i · %u · %x/%X · %s · %c · %p</text>
+    <text class="tag" y="78">C · Variadic arguments · Precise formatting</text>
+  </g>
+
+  <!-- Terminal derecha (contenido envuelto) -->
+  <g transform="translate(740,60)">
+    <rect x="0" y="0" width="500" height="220" rx="12" fill="#0b1020" stroke="#70a5fd" stroke-opacity=".5"/>
+    <!-- Semáforos -->
+    <g transform="translate(16,14)">
+      <circle cx="0" cy="0" r="4" fill="#f7768e"/>
+      <circle cx="12" cy="0" r="4" fill="#bb9af7"/>
+      <circle cx="24" cy="0" r="4" fill="#7aa2f7"/>
+    </g>
+    <!-- Contenido -->
+    <g transform="translate(16,44)">
+      <text class="mono">
+        <tspan x="0" dy="0">ft_printf("%d %s %x %p\n",</tspan>
+        <tspan x="0" dy="22">42, "hi", 0xBEEF, (void*)0x7ffe);</tspan>
+      </text>
+      <text class="mono" x="0" y="64">output: 42 hi beef 0x7ffe</text>
+      <text class="mono" x="0" y="92">supports: d i u x/X s c p</text>
+    </g>
+  </g>
+</svg>
