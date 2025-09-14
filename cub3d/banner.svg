@@ -1,0 +1,94 @@
+<!-- assets/banner.svg | Cub3D -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+  <title id="t">Cub3D — Raycasting · MiniLibX · Texturas</title>
+  <desc id="d">Banner oscuro con título a la izquierda y a la derecha un minimapa con rayos y un panel de render con columnas de pared.</desc>
+
+  <!-- ===== Defs & estilos ===== -->
+  <defs>
+    <!-- Fondo -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1b27"/>
+      <stop offset="100%" stop-color="#15161e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.10"/>
+      <stop offset="60%" stop-color="#1a1b27" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Patrón de rejilla para el minimapa -->
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0 H0 V20" stroke="#2a2d3a" stroke-width="1"/>
+    </pattern>
+
+    <!-- Flechas de rayos -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#70a5fd"/>
+    </marker>
+
+    <!-- Estilos -->
+    <style>
+      .title{font:700 56px/1.1 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#70a5fd}
+      .tag{font:500 20px/1.4 Inter,Segoe UI,Roboto,Arial,sans-serif;fill:#c0caf5}
+      .mono{font:600 14px/1.35 "JetBrains Mono","Fira Code",Menlo,Consolas,monospace;fill:#c0caf5}
+      .panel{fill:#0b1020;stroke:#70a5fd;stroke-opacity:.35}
+      .wall{fill:#bb9af7;opacity:.9}
+      .ray{stroke:#70a5fd;stroke-width:2;opacity:.85}
+    </style>
+  </defs>
+
+  <!-- ===== Fondo ===== -->
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <rect width="1280" height="360" fill="url(#glow)"/>
+
+  <!-- ===== Texto izquierdo ===== -->
+  <g transform="translate(64,112)">
+    <text class="title">Cub3D</text>
+    <text class="tag" y="48">Raycasting · MiniLibX · Texturas · Floor/Ceiling · FOV</text>
+    <text class="tag" y="78">C · Matrices · Colisiones · Normalización de rayos</text>
+  </g>
+
+  <!-- ===== Composición derecha (ancho interno ≤ 500px; x=740 => 740+500=1240 < 1280) ===== -->
+  <g transform="translate(740,44)">
+    <!-- Minimap (220×220) -->
+    <g>
+      <rect class="panel" x="0" y="0" width="220" height="220" rx="10" />
+      <rect x="10" y="10" width="200" height="200" fill="url(#grid)" rx="6"/>
+
+      <!-- Muros (ejemplo) -->
+      <rect class="wall" x="10"  y="10"  width="200" height="20"  rx="2"/>
+      <rect class="wall" x="10"  y="190" width="200" height="20"  rx="2"/>
+      <rect class="wall" x="10"  y="10"  width="20"  height="200" rx="2"/>
+      <rect class="wall" x="190" y="10"  width="20"  height="200" rx="2"/>
+      <rect class="wall" x="90"  y="90"  width="40"  height="40"  rx="2" opacity=".8"/>
+
+      <!-- Jugador -->
+      <circle cx="60" cy="120" r="6" fill="#f7768e"/>
+
+      <!-- Rango FOV (rayos) -->
+      <line class="ray" x1="60" y1="120" x2="200" y2="100" marker-end="url(#arrow)"/>
+      <line class="ray" x1="60" y1="120" x2="200" y2="120" marker-end="url(#arrow)"/>
+      <line class="ray" x1="60" y1="120" x2="200" y2="140" marker-end="url(#arrow)"/>
+
+      <text class="mono" x="0" y="-8">minimap</text>
+    </g>
+
+    <!-- Panel de render (220×160) a la derecha del minimapa -->
+    <g transform="translate(240,20)">
+      <rect class="panel" x="0" y="0" width="220" height="160" rx="10"/>
+      <text class="mono" x="0" y="-8">render</text>
+
+      <!-- Columnas de pared (raycasting) -->
+      <!-- 10 barras con alturas variadas -->
+      <rect x="10"  y="70"  width="12" height="80" fill="#7aa2f7" opacity=".9"/>
+      <rect x="32"  y="50"  width="12" height="100" fill="#7aa2f7" opacity=".9"/>
+      <rect x="54"  y="40"  width="12" height="120" fill="#7aa2f7" opacity=".95"/>
+      <rect x="76"  y="55"  width="12" height="105" fill="#7aa2f7" opacity=".9"/>
+      <rect x="98"  y="62"  width="12" height="98"  fill="#7aa2f7" opacity=".9"/>
+      <rect x="120" y="58"  width="12" height="102" fill="#7aa2f7" opacity=".9"/>
+      <rect x="142" y="42"  width="12" height="118" fill="#7aa2f7" opacity=".95"/>
+      <rect x="164" y="52"  width="12" height="108" fill="#7aa2f7" opacity=".9"/>
+      <rect x="186" y="66"  width="12" height="94"  fill="#7aa2f7" opacity=".9"/>
+      <rect x="208" y="74"  width="12" height="86"  fill="#7aa2f7" opacity=".9"/>
+    </g>
+  </g>
+</svg>
